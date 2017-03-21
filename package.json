@@ -1,0 +1,17 @@
+{
+  "name": "bfstats",
+  "version": "1.0.0",
+  "description": "view your battlefield stats on desktop",
+  "main": "main.js",
+  "scripts": {
+    "start" : "electron ."
+  },
+  "author": "karam karim",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^1.6.1"
+  },
+  "dependencies": {
+   "battlefield-stats": "^1.0.4"
+  }
+}
