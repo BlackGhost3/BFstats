@@ -1,0 +1,91 @@
+.tooltip{
+    position: relative !important;
+    overflow: visible !important;
+}
+
+.tooltip:hover > .tip{
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+}
+
+.tip{
+    position: absolute !important;
+    opacity: 0;
+    width: 150px;
+    max-width: 300px;
+    background-color: var(--main-black);
+    color: var(--main-orange);
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: opacity 300ms ease;
+    top: calc(100% + 10px);
+    left: 5px;
+    transform: translateY(50px) scale(.2);
+    box-sizing: border-box;
+    z-index: 999;
+    word-break: break-all;
+    transition: all 400ms ease;
+}
+
+
+.tip::after, .tip::before{
+    content: '';
+    border-width: 10px;
+    border-color: transparent;
+    border-style: solid;
+    position: absolute;
+}
+
+
+.tip[data-pos="top"]::after{
+    top: 99%;
+    left: 10px;
+    border-top-color: var(--main-black);
+}
+
+.tip[data-pos="top"]{
+    top: calc(-70% + -20px)  !important;
+    left: 50%;
+    transform: translateX(150px) scale(.2);
+}
+
+
+.tip[data-pos="bottom"]::after{
+    bottom: 99%;
+    left: 10px;
+    border-bottom-color: var(--main-black);
+}
+
+.tip[data-pos="bottom"]{
+    top: calc(70%  + 20px) !important;
+    left: 50%;
+    transform: translateY(-150px) scale(.2);
+}
+
+.tip[data-pos="left"]::after{
+    top: 50%;
+    transform: translateY(-50%);
+    left: 100%;
+    border-left-color: var(--main-black);
+}
+
+.tip[data-pos="left"]{
+    left: calc(-100% + -100px)  !important;
+    top: calc(20%);
+    transform: translateX(150px) scale(.2);
+}
+
+
+.tip[data-pos="right"]::after{
+    top: 50%;
+    transform: translateY(-50%);
+    right: 100%;
+    border-right-color: var(--main-black);
+}
+
+.tip[data-pos="right"]{
+    left: calc(100%  + 20px) !important;
+    top: calc(20%);
+    transform: translateX(-150px) scale(.2);
+}
