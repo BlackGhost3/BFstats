@@ -7,3 +7,5 @@ if there is anything wrong in the code or the way I uploaded the file please let
 
 i'm using [battlefield-stats](https://github.com/MattMcFarland/battlefield-stats) API to get players data
 for any suggestion and new ideas are welcomed.
+
+i'll try to make windows installer for it ASAP.
